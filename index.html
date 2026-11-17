@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reusable Footer Component</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.3/babel.min.js"></script>
+    <script
+      data-plugins="transform-modules-umd" //le dice a Babel que convierta los import/export a un formato (UMD) que el navegador entiende. Sin esto, el "export" de index.jsx daría error
+      type="text/babel"
+      src="index.jsx"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    /*data-plugins="transform-modules-umd": igual que arriba, permite
+      usar "import {  } from './index.jsx'" en este script
+      data-presets="react": le dice a Babel que traduzca el JSX
+      data-type="module": le indica a Babel que trate este código como
+      un módulo (con import/export), no como un script común*/
+    <script
+      data-plugins="transform-modules-umd" 
+      type="text/babel"
+      data-presets="react"
+      data-type="module"  
+    >
+      import { Footer } from './index.jsx';
+      ReactDOM.createRoot(document.getElementById('root')).render(<Footer />);
+    </script>
+  </body>
+</html>
