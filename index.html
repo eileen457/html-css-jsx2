@@ -16,11 +16,6 @@
 
   <body>
     <div id="root"></div>
-    //data-plugins="transform-modules-umd": igual que arriba, permite
-    //usar "import {  } from './index.jsx'" en este script
-    // data-presets="react": le dice a Babel que traduzca el JSX
-    //data-type="module": le indica a Babel que trate este código como
-    //un módulo (con import/export), no como un script común
     <script
       data-plugins="transform-modules-umd" 
       type="text/babel"
@@ -32,3 +27,9 @@
     </script>
   </body>
 </html>
+
+    //data-plugins="transform-modules-umd": igual que arriba, permite
+    //usar "import {  } from './index.jsx'" en este script
+    // data-presets="react": le dice a Babel que traduzca el JSX
+    //data-type="module": le indica a Babel que trate este código como
+    //un módulo (con import/export), no como un script común
